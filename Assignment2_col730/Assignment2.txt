@@ -1,0 +1,19 @@
+
+COL 730 Assignment 2
+Submit your assignment online at moodle
+
+This assignment will replace message passing with shared emmory programming. The task remains to sort records by key in a non-decreasing order. 
+We will let the key be 32-bit integers, and let the value (the rest of the record) be fixed length (but determined at compile-time). 
+You should reimplement the function sort (meaning quick sort, merge sort, radix sort, and any other sort of your choice). Include and implement sort.h. 
+This time the sort function is called from a sequential context, and inside the sort function you will create as many threads as necessary to sort. 
+On return from the sort function, the caller receives the data in the sorted order.
+
+Again compile the functions into a library called psort - that is libpsort.so or libpsort.a, so the test code can directly call your sorting functions. 
+Submit the source code along with a makefile that builds the library. You should write your own application program to test the library. 
+The scoring will be based on correctness, speed and scalability. You may use all available processors. You should test sorting sizes at least upto 230 items and scale to 20 processors.
+
+In addition to the library, you must submit a document, design.pdf describing your design and listing major design decisions you made. 
+On what basis did you make these decisions? List experiments and their results that lead you to make the design decision you made. 
+Between the two methods, which is faster in your experiments. Why? Does your code scale? Demonstrate.
+
+Put all files in a folder with the same name as your entry number and zip the folder. Submit the single zip file. 
