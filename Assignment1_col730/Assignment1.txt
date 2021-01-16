@@ -1,0 +1,21 @@
+
+COL 730 Assignment 1
+Submit your assignment online at moodle
+
+The goal is to learn message-passing based programming using MPI. You want to sort records by key in a non-decreasing order. 
+We will keep it simple and let the keys by 32-bit integrs, and let the value (the rest of the record) be fixed length (but determined at compile-time). 
+You should Implement parallel collective function to quick sort, merge sort, radix sort, and any other sort of your choice. 
+In particular, include and implement sort.h. On return from the sort function, elements on each processor must remain sorted and elements at 
+the process of rank i must be less than those at rank j, if i < j.
+
+Compile the functions into a library called psort - that is libpsort.so or libpsort.a, so the test code can directly call your sorting functions.
+ Submit the source code along with a makefile that builds the library. You should write your own application program to test the library. 
+The scoring will be based on correctness, speed and scalability. Assume that the calling function does not set up MPI -- it calls your initialization and
+ closedown functions as given in sort.h. The executable will be run with mpirun (with the requisite arguments). Choose the best configuration given the node/process count.
+ You should not add new processes. You should test sorting sizes at least upto 232 items and scale to at least 8 nodes/64 processes.
+
+In addition to the library, you must submit a document, design.pdf describing your design and listing major design decisions you made. 
+On what basis did you make these decisions? List experiments and their results that lead you to make the design decision you made.
+ Between the two methods, which is faster in your experiments. Why? Does your code scale? Demonstrate.
+
+Put all files in a folder with the same name as your entry number and zip the folder. Submit the single zip file. 
