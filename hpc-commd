@@ -1,0 +1,3 @@
+module load compiler/mpi/openmpi/3.0.0/gnu
+module load mpi/openmpi/3.1.0/gnu/mpivars
+qsub -I -P col730.tt1170925  -l select=64:ncpus=1 -l walltime=1:00:00
